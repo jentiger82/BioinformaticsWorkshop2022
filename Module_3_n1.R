@@ -35,11 +35,11 @@ if (x==3){
 # Else If
 x = 0
 if (x==3){
-  print ("X is equal to three")
+  print("X is equal to three")
 } else if (x == 0){
-  print ("X is equal to zero")
+  print("X is equal to zero")
 } else {
-  print ("I don't know what X is")
+  print("I don't know what X is")
 }
 
 ##Loops
@@ -55,18 +55,18 @@ print(numbers[3])
 print(numbers[4])
 #Whereas using the 'for loops' you can do the same thing but with much less effort. 
 for (var in numbers) {
-  print (var)
+  print(var)
 }
 #You can utilize index within a for loop function as well. 
 for (var in 1:length(numbers)){
-  print (numbers[var])
+  print(numbers[var])
 }
 
 ## While loops
 #This type of loop continues to repeat until a specific condition is met and the condition evaluates to FALSE 
 x <- 1
 while (x<6){
-  print (paste("x is equal to", x)) 
+  print(paste("x is equal to", x)) 
   x <-  x + 1
 }
 #Notice how in the above code I made sure to correct x so that eventually x will be 6 or greater, whereby the while condition will return FALSE and end. 
@@ -78,7 +78,7 @@ while (x<6){
 numbers <- c(1,2,4,6)
 for (var in numbers){
   if (var == 4){
-    print (paste("The variable 4 should not be there, exiting"))
+    print(paste("The variable 4 should not be there, exiting"))
     break
   }
   print(paste("Values are : ", var))
@@ -87,7 +87,7 @@ for (var in numbers){
 numbers2 <- c(1,3,5,6)
 for (var in numbers2){
   if (var == 4){
-    print (paste("The variable 4 should not be there, exiting"))
+    print(paste("The variable 4 should not be there, exiting"))
     break
   }
   print(paste("Values are : ", var))
@@ -98,10 +98,10 @@ for (var in numbers2){
 numbers <- c(1, 2, 4, 6)
 for (var in numbers) {
   if (var ==4) {
-    print (paste ("The variable 4 should not be there"))
+    print(paste ("The variable 4 should not be there"))
     next
   }
-  print (paste("Values are: ", var))
+  print(paste("Values are: ", var))
 }
 
 ## Challenge Question 1
@@ -109,9 +109,9 @@ What does the following give you?
 numbers <- c(1, 2, 4, 6)
 for (var in numbers) {
   if (var ==4) {
-    print (paste ("The variable 4 should not be there"))
+    print(paste ("The variable 4 should not be there"))
     next
-    print (paste("Values are: ", var))
+    print(paste("Values are: ", var))
   }
 }
 
@@ -120,9 +120,9 @@ for (var in numbers) {
 numbers <- c(1, 2, 4, 6)
 for (var in numbers) {
   if (var ==4) {
-    print (paste ("The variable 4 should not be there"))
+    print(paste ("The variable 4 should not be there"))
     next
-    print (paste("Values are: ", var))
+    print(paste("Values are: ", var))
   }
 }
 
@@ -130,10 +130,10 @@ for (var in numbers) {
 #Functions take an input (argument) and produces an output.
 #R has many functions available to do bioinformatics work. 
 numbers <-c(1, 2, 4, 6)
-print (numbers)
+print(numbers)
 str(numbers)
-sum (numbers)
-mean (numbers)
+sum(numbers)
+mean(numbers)
 
 ## Read and write csv functions
 #These types of functions allow you to manipulate external files into or out of the R environment. 
@@ -142,7 +142,7 @@ Data.table <- read.csv("D:/Bioinformatics_Seminar_2022/Bioinformatics.csv")
 #The **write.csv** function writes a data frame or other object into 
 #a table that can then be opened with excel or another text editor
 my.df <- data.frame(x = 1:5, y = 3:7)
-write.csv (my.df, "D:/Bioinformatics_Seminar_2022/Bioinformatics_data.csv")
+write.csv(my.df, "D:/Bioinformatics_Seminar_2022/Bioinformatics_data.csv")
 
 ## Challenge Question 2
 #In our previous .csv file that we had, the rows all matched together. But what happens when you read in a file that does not have matching rows/columns?
@@ -169,7 +169,7 @@ Square_It(42)
 #3 types of apply functions: apply, lapply, sapply
 ## Apply: Lets say that we have our dataframe: 
 my.df2 <- data.frame(x= c(2, 5, 10, 2, 3), y= 1:5)
-print (my.df2)
+print(my.df2)
 #and we want to calculate the mean of each individual row in that dataframe. 
 #Lets try it with a for loop. 
 for (var in 1:nrow(my.df2)) {
@@ -183,8 +183,8 @@ apply(my.df2, 1,  mean)
 #lapply works on vectors or lists, and outputs the results as a list. 
 x <- sample(1:100, size = 10)
 y <- sample(1:100, size = 10)
-z <-  sample (1:100, size = 10)
-lis <- list (x, y, z)
+z <-  sample(1:100, size = 10)
+lis <- list(x, y, z)
 lis_min <- lapply(lis, min)
 print(lis_min)
 str(lis_min)
@@ -194,8 +194,8 @@ str(lis_min)
 #rather than a list. 
 x <- sample(1:100, size = 10)
 y <- sample(1:100, size = 10)
-z <-  sample (1:100, size = 10)
-lis <- list (x, y, z)
+z <-  sample(1:100, size = 10)
+lis <- list(x, y, z)
 lis_min <- sapply(lis, min)
 print(lis_min)
 str(lis_min)
