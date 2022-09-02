@@ -6,12 +6,12 @@
 # Numeric  
 x = 42
 if(x>0) {
-  print ("Positive number")
+  print("Positive number")
 }
 #Logical 
 x = 3
 if (x == 3){
-  print ("X is equal to three")
+  print("X is equal to three")
 }
 
 ##IF Else Statements
@@ -21,14 +21,14 @@ x = 42
 if (x > 0) {
   print("Positive number")
 } else {
-  print ("Negative number")
+  print("Negative number")
 }
 #Logical condition
 x = 42
 if (x==3){
-  print ("X is equal to three")
+  print("X is equal to three")
 } else {
-  print ("X does not equal to three")
+  print("X does not equal to three")
 }
 
 ## To get even more control from your block of code, you can use else if controls...
